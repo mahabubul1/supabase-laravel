@@ -1,0 +1,71 @@
+{
+    "name": "bdevs/supabase-laravel",
+    "description": "Laravel package for integrating with Supabase (Auth, Storage, Edge Functions).",
+    "type": "library",
+    "keywords": ["laravel", "supabase"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "BlackDevs",
+            "homepage": "https://github.com/blackdevsco",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Md Mahabubul Alam",
+            "email": "mahabubulalam952@gmail.com",
+            "homepage": "https://github.com/mahabubul1",
+            "role": "Contributor"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "illuminate/auth": "^11.0|^12.0|^13.0",
+        "illuminate/broadcasting": "^11.0|^12.0|^13.0",
+        "illuminate/bus": "^11.0|^12.0|^13.0",
+        "illuminate/cache": "^11.0|^12.0|^13.0",
+        "illuminate/contracts": "^11.0|^12.0|^13.0",
+        "illuminate/events": "^11.0|^12.0|^13.0",
+        "illuminate/filesystem": "^11.0|^12.0|^13.0",
+        "illuminate/http": "^11.0|^12.0|^13.0",
+        "illuminate/notifications": "^11.0|^12.0|^13.0",
+        "illuminate/queue": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "illuminate/validation": "^11.0|^12.0|^13.0",
+        "guzzlehttp/guzzle": "^7.8|^8.0",
+        "laravel/prompts": "^0.1|^0.2|^0.3",
+        "laravel/serializable-closure": "^1.3|^2.0",
+        "league/flysystem": "^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BlackDevs\\SupabaseLaravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BlackDevs\\SupabaseLaravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BlackDevs\\SupabaseLaravel\\SupabaseServiceProvider"
+            ],
+            "aliases": {
+                "Supabase": "BlackDevs\\SupabaseLaravel\\Facades\\Supabase"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    }
+}
